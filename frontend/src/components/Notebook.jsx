@@ -16,7 +16,7 @@ function Notebook() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchSubjects = async () => {
-    const res = await axios.get("http://localhost:5000/api/subjects");
+    const res = await axios.get("https://notebook-backend-aveb.onrender.com/api/subjects");
     setSubjects(res.data);
   };
 
@@ -26,7 +26,7 @@ function Notebook() {
 
   const updateSubject = async (subject) => {
     await axios.put(
-      `http://localhost:5000/api/subjects/${subject._id}`,
+      `https://notebook-backend-aveb.onrender.com/api/subjects/${subject._id}`,
       subject
     );
     fetchSubjects();
@@ -35,7 +35,7 @@ function Notebook() {
   // Subject actions
   const addSubject = async () => {
     if (!newSubject.trim()) return alert("Enter subject name");
-    await axios.post("http://localhost:5000/api/subjects", {
+    await axios.post("https://notebook-backend-aveb.onrender.com/api/subjects", {
       name: newSubject.trim(),
       topics: [],
     });
@@ -53,7 +53,7 @@ function Notebook() {
 
   const deleteSubject = async (subjectId) => {
     if (!window.confirm("Delete this subject?")) return;
-    await axios.delete(`http://localhost:5000/api/subjects/${subjectId}`);
+    await axios.delete(`https://notebook-backend-aveb.onrender.com/api/subjects/${subjectId}`);
     fetchSubjects();
   };
 
