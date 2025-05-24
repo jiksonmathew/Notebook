@@ -36,16 +36,15 @@ function App() {
         </div>
 
         <footer className="bg-dark text-white text-center py-3 mt-auto">
-          <div className="container">
-            <p className="mb-1">Website developed by Jikson Mathew</p>
-            <p className="mb-1">
-              Email: jiksonmathew14@gmail.com | Phone: 9526121657
-            </p>
-            <p className="mb-0">
-              © {new Date().getFullYear()} All rights reserved.
-            </p>
-          </div>
-        </footer>
+  <div className="container">
+    <p className="mb-1">Website developed by Jikson Mathew</p>
+    <p className="mb-1">
+      Email: <a href="mailto:jiksonmathew14@gmail.com" className="text-white text-decoration-none">jiksonmathew14@gmail.com</a> | 
+      Phone: <a href="tel:9526121657" className="text-white text-decoration-none ms-1">9526121657</a>
+    </p>
+    <p className="mb-0">© {new Date().getFullYear()} All rights reserved.</p>
+  </div>
+</footer>
       </div>
     </Router>
   );
