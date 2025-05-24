@@ -10,7 +10,7 @@ function ViewNotes() {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/subjects");
+        const res = await axios.get("https://notebook-backend-aveb.onrender.com/api/subjects");
         setSubjects(res.data);
       } catch (error) {
         console.error("Error fetching notes:", error);
